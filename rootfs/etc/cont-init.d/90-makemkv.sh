@@ -81,5 +81,6 @@ if ! chown $UID:$GID /output; then
     fi
 fi
 
+#Link fonts
 ln -sf /usr/share/fonts/ttf-droid /opt/makemkv/lib/fonts
 # vim:ft=sh:ts=4:sw=4:et:sts=4

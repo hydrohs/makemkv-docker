@@ -19,6 +19,9 @@ while read -r DRV; do
     if [ -e "$SG_DEV" ] && [ -e "$SR_DEV" ]; then
         # Save the associated group.
         DRV_GRP="$(stat -c "%g" "$SR_DEV")"
+        #Add user to drive group
+        addgroup -g $DRV_GRP bdrom
+        addgroup "${UNAME}" bdrom
         log "found optical drive [$SR_DEV, $SG_DEV], group $DRV_GRP."
         GRPS="${GRPS:- } $DRV_GRP"
     elif [ -e "$SG_DEV" ]; then
