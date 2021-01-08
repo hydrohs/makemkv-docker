@@ -5,8 +5,8 @@ services:
     build: .
     container_name: makemkv
     ports:
-      - "2200:2200"
-      - "10000:10000"
+      - "2202:2200"
+      - "10002:10000"
     volumes:
       - ~/.ssh/authorized_keys:/authorized_keys:ro
       - config:/config
@@ -16,6 +16,11 @@ services:
       - AUTO_DISC_RIPPER=0
       - AUTO_DISC_RIPPER_EJECT=1
       - AUTO_DISC_RIPPER_MIN_TITLE_LENGTH=120
+    env_file:
+      - .env
+    devices:
+      - /dev/sr1
+      - /dev/sg10
 
 volumes:
   config:
