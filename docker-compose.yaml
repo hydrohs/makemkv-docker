@@ -5,7 +5,7 @@ services:
     build: .
     container_name: makemkv
     ports:
-      - "2202:2200"
+      - "2202:22"
       - "10002:10000"
     volumes:
       - ~/.ssh/authorized_keys:/authorized_keys:ro
