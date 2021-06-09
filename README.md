@@ -1,6 +1,6 @@
 # Docker container for MakeMKV
 
-This is a Docker container for [MakeMKV](http://www.makemkv.com/).
+This is a Docker container for [MakeMKV](http://www.makemkv.com/). Based on this [container](https://github.com/jlesage/docker-makemkv).
 
 The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via [Xpra](https://xpra.org) over SSH.
 

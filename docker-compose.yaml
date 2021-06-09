@@ -5,13 +5,13 @@ services:
     build: .
     container_name: makemkv
     ports:
-      - "2202:22"
-      - "10002:10000"
+      - "2200:22"
+      - "10000:10000"
     volumes:
       - ~/.ssh/authorized_keys:/authorized_keys:ro
       - config:/config
-      - /data/hydrohs:/storage
-      - /data/hydrohs/ripped:/output
+      - /storage:/storage
+      - /output:/output
     environment:
       - AUTO_DISC_RIPPER=1
       - AUTO_DISC_RIPPER_EJECT=1
