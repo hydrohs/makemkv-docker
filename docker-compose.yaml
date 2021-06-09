@@ -2,7 +2,7 @@ version: "3"
 
 services:
   makemkv:
-    build: .
+    image: hydrohs/makemkv
     container_name: makemkv
     ports:
       - "2200:22"
